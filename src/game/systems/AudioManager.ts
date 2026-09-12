@@ -1,0 +1,3 @@
+export class AudioManager{private ctx?:AudioContext; beep(freq:number,duration=.08,type:OscillatorType='sine'){if(!localStorage||!this.enabled())return;try{this.ctx??=new AudioContext();const o=this.ctx.createOscillator(),g=this.ctx.createGain();o.type=type;o.frequency.value=freq;g.gain.setValueAtTime(.055,this.ctx.currentTime);g.gain.exponentialRampToValueAtTime(.001,this.ctx.currentTime+duration);o.connect(g).connect(this.ctx.destination);o.start();o.stop(this.ctx.currentTime+duration)}catch{}} enabled(){return SaveManagerSafe().soundEnabled}}
+function SaveManagerSafe(){try{return JSON.parse(localStorage.getItem('defendMyDogSave')||'{"soundEnabled":true}')}catch{return {soundEnabled:true}}}
+export const audio=new AudioManager();

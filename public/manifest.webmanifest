@@ -1,0 +1,1 @@
+{"name":"Defend My Dog","short_name":"DMD","description":"Disegna per proteggere il cane!","start_url":"./","display":"standalone","background_color":"#eef8ff","theme_color":"#5c54e8","orientation":"portrait-primary","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
