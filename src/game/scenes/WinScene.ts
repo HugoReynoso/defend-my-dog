@@ -1,2 +1,14 @@
 import Phaser from 'phaser'; import {COLORS,W} from '../config/constants';
-export class WinScene extends Phaser.Scene{constructor(){super('Win')}create(d:{level:number;stars:number;used:number}){this.cameras.main.setBackgroundColor(COLORS.sky);this.add.text(W/2,180,'LEVEL COMPLETE!',{fontFamily:'Arial',fontSize:'34px',fontStyle:'bold',color:'#5148d9'}).setOrigin(.5);this.add.text(W/2,280,'★'.repeat(d.stars)+'☆'.repeat(3-d.stars),{fontFamily:'Arial',fontSize:'62px',color:'#ffb62e'}).setOrigin(.5);this.add.text(W/2,355,`INCHIOSTRO USATO: ${d.used}%\n+10 COINS${d.stars===3?' + BONUS 10':''}`,{align:'center',fontFamily:'Arial',fontSize:'18px',fontStyle:'bold',color:'#253449',lineSpacing:12}).setOrigin(.5);this.btn(485,d.level<10?'NEXT LEVEL':'LEVELS',()=>this.scene.start(d.level<10?'Game':'LevelSelect',d.level<10?{level:d.level+1}:{}));this.btn(565,'REPLAY',()=>this.scene.start('Game',{level:d.level}),0xffffff,0x5148d9);this.btn(645,'HOME',()=>this.scene.start('Menu'),0xffffff,0x5148d9);for(let i=0;i<30;i++){const p=this.add.circle(W/2,230,3+Math.random()*4,Phaser.Display.Color.RandomRGB().color);this.tweens.add({targets:p,x:Math.random()*W,y:100+Math.random()*500,alpha:0,duration:900+Math.random()*900})}}private btn(y:number,t:string,cb:()=>void,c=0x5c54e8,tc=0xffffff){const b=this.add.rectangle(W/2,y,250,60,c).setStrokeStyle(2,0x5c54e8).setInteractive();this.add.text(W/2,y,t,{fontFamily:'Arial',fontSize:'21px',fontStyle:'bold',color:'#'+tc.toString(16).padStart(6,'0')}).setOrigin(.5);b.on('pointerdown',cb)}}
+export class WinScene extends Phaser.Scene{
+ constructor(){super('Win')}
+ create(d:{level:number;stars:number;used:number}){
+  this.cameras.main.setBackgroundColor(COLORS.sky);
+  this.add.text(W/2,180,'LEVEL COMPLETE!',{fontFamily:'Arial',fontSize:'34px',fontStyle:'bold',color:'#5148d9'}).setOrigin(.5);
+  this.add.text(W/2,280,'★'.repeat(d.stars)+'☆'.repeat(3-d.stars),{fontFamily:'Arial',fontSize:'62px',color:'#ffb62e'}).setOrigin(.5);
+  this.add.text(W/2,355,`INCHIOSTRO USATO: ${d.used}%\n+10 COINS${d.stars===3?' + BONUS 10':''}`,{align:'center',fontFamily:'Arial',fontSize:'18px',fontStyle:'bold',color:'#253449',lineSpacing:12}).setOrigin(.5);
+  this.btn(485,d.level<20?'NEXT LEVEL':'LEVELS',()=>this.scene.start(d.level<20?'Game':'LevelSelect',d.level<20?{level:d.level+1}:{page:1}));
+  this.btn(565,'REPLAY',()=>this.scene.start('Game',{level:d.level}),0xffffff,0x5148d9);this.btn(645,'HOME',()=>this.scene.start('Menu'),0xffffff,0x5148d9);
+  for(let i=0;i<30;i++){const p=this.add.circle(W/2,230,3+Math.random()*4,Phaser.Display.Color.RandomRGB().color);this.tweens.add({targets:p,x:Math.random()*W,y:100+Math.random()*500,alpha:0,duration:900+Math.random()*900})}
+ }
+ private btn(y:number,t:string,cb:()=>void,c=0x5c54e8,tc=0xffffff){const b=this.add.rectangle(W/2,y,250,60,c).setStrokeStyle(2,0x5c54e8).setInteractive();this.add.text(W/2,y,t,{fontFamily:'Arial',fontSize:'21px',fontStyle:'bold',color:'#'+tc.toString(16).padStart(6,'0')}).setOrigin(.5);b.on('pointerdown',cb)}
+}

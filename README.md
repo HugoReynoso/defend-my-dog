@@ -10,10 +10,10 @@ Il gioco è ottimizzato per smartphone in modalità portrait, ma supporta anche 
 
 ## Funzionalità
 
-- 10 livelli progressivi e data-driven, distribuiti in 3 mondi
+- 20 livelli progressivi e data-driven, distribuiti in 5 mondi
 - difficoltà Facile, Media e Difficile con scenari e pericoli crescenti
 - linea fisica continua con smoothing, limite di inchiostro e collisioni Matter.js
-- sciami aggressivi di api normali e veloci con inseguimento, accelerazione ravvicinata, variazione, separazione e deviazioni
+- sciami aggressivi con inseguimento, manovre laterali attorno alle difese, ricerca dei varchi e pressione sulle barriere mobili
 - rocce dinamiche e spuntoni
 - valutazione da 1 a 3 stelle, monete e sblocco progressivo
 - salvataggio robusto in `localStorage`
@@ -66,7 +66,7 @@ public/               # manifest, icona e service worker
 2. Aggiungi un oggetto conforme a `LevelData` nell'array `levels`.
 3. Configura posizione del cane, piattaforme, alveari, tempo, inchiostro e soglie stelle.
 4. Aggiungi facoltativamente `walls`, `spikes` e `rocks`.
-5. Aggiorna il limite dei livelli nell'interfaccia e nel metodo `SaveManager.complete` se superi il livello 10.
+5. Aggiorna il limite dei livelli nell'interfaccia e nel metodo `SaveManager.complete` se superi il livello 20.
 
 Esempio di alveare:
 
