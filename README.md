@@ -24,6 +24,7 @@ Il gioco è ottimizzato per smartphone in modalità portrait, ma supporta anche 
 - pulsante Home sempre disponibile durante il livello
 - riserva d'inchiostro più che raddoppiata per linee lunghe e soluzioni geometriche elaborate
 - sistema di appoggi fisici: zero appoggi significa difesa mobile, un appoggio crea una leva, due appoggi stabilizzano la protezione
+- indicatore `APPOGGI 0/2` ed estremità rosse/verdi per rendere leggibile la stabilità della difesa
 - acqua e lava capaci di eliminare il cane nei livelli ambientali
 
 ## Installazione e sviluppo
