@@ -10,7 +10,8 @@ Il gioco è ottimizzato per smartphone in modalità portrait, ma supporta anche 
 
 ## Funzionalità
 
-- 10 livelli progressivi e data-driven
+- 10 livelli progressivi e data-driven, distribuiti in 3 mondi
+- difficoltà Facile, Media e Difficile con scenari e pericoli crescenti
 - linea fisica continua con smoothing, limite di inchiostro e collisioni Matter.js
 - sciami di api normali e veloci con variazione, separazione e deviazioni
 - rocce dinamiche e spuntoni
@@ -20,6 +21,7 @@ Il gioco è ottimizzato per smartphone in modalità portrait, ma supporta anche 
 - vibrazione, effetti sonori sintetizzati e particelle leggere
 - PWA offline-ready, safe area iPhone e avviso rotazione
 - retry immediato senza ricaricare la pagina
+- pulsante Home sempre disponibile durante il livello
 
 ## Installazione e sviluppo
 
