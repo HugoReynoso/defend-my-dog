@@ -22,7 +22,9 @@ Il gioco è ottimizzato per smartphone in modalità portrait, ma supporta anche 
 - PWA offline-ready, safe area iPhone e avviso rotazione
 - retry immediato senza ricaricare la pagina
 - pulsante Home sempre disponibile durante il livello
-- riserva d'inchiostro bilanciata per cupole e protezioni più elaborate
+- riserva d'inchiostro più che raddoppiata per linee lunghe e soluzioni geometriche elaborate
+- sistema di appoggi fisici: zero appoggi significa difesa mobile, un appoggio crea una leva, due appoggi stabilizzano la protezione
+- acqua e lava capaci di eliminare il cane nei livelli ambientali
 
 ## Installazione e sviluppo
 
