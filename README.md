@@ -4,7 +4,7 @@ Un puzzle game mobile-first originale: disegna una sola linea, trasformala in un
 
 ## 🎮 Demo online
 
-**[Gioca a Defend My Dog](https://hugoreynoso.github.io/defend-my-dog/)**
+**[Gioca a Defend My Dog](https://hugoreynoso.github.io/game-defend-my-dog/)**
 
 Il gioco è ottimizzato per smartphone in modalità portrait, ma supporta anche mouse e desktop. È installabile come PWA.
 
